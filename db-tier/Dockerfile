@@ -1,4 +1,4 @@
-FROM postgres:10.5
+FROM harbor-repo.vmware.com/moffzilla/postgres:10.5
 
 WORKDIR /
 

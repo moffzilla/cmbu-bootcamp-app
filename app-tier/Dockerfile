@@ -1,4 +1,4 @@
-FROM alpine
+FROM harbor-repo.vmware.com/moffzilla/alpine:3.12
 
 LABEL maintainer "Cody De Arkland <cdearkland@vmware.com>"
 LABEL description "Python API tier running flask, gunicorn, and supervisord"
@@ -14,6 +14,8 @@ RUN apk add --no-cache \
     python3-dev \ 
     musl-dev \
     git \
+    make \
+    libffi-dev \
     linux-headers && \ 
     python3 -m ensurepip && \
     rm -r /usr/lib/python*/ensurepip && \
